@@ -1,38 +1,58 @@
-# Module 1 — Dataflow Gen2
+# Module 1 — Dataflow Gen2 Ingestion
 
 ## Objective
+Build an end-to-end data ingestion and transformation solution
+using Microsoft Fabric Dataflow Gen2 and Lakehouse.
 
-Build a visual ETL process using Microsoft Fabric Dataflow Gen2.
+## Architecture
 
-## Source
+CSV Files
+    ↓
+Lakehouse Files
+    ↓
+Dataflow Gen2
+    ↓
+Power Query
+    ↓
+Lakehouse Tables
 
-Customer CSV data.
+## Sources
+- customers.csv
+- products.csv
+- orders.csv
 
 ## Transformations
+### Customers
+- Promote headers
+- Replace blank city with Unknown
+- Rename customer_segment → segment
+- signup_date → Date
+- Remove duplicate customer_id
 
-- Handle NULL values
-- Rename columns
-- Filter records
+### Products
+- Promote headers
+- Missing category → Unknown
+- unit_price → Decimal number
+- stock_qty → Whole number
+- Filter active products
+- Remove duplicate product_id
+
+### Orders
+- Promote headers
+- Verify data types
+- Filter Completed orders
+- Remove duplicate order_id
 
 ## Destination
+Lakehouse: LH_Ecommerce_Lakehouse
 
-Microsoft Fabric Lakehouse table.
+Tables:
+- dbo.customers
+- dbo.products
+- dbo.orders
 
-## Pipeline Integration
+## Pipeline
+Dataflow Gen2 embedded in Pipeline and executed successfully.
 
-Execute the Dataflow Gen2 through a Fabric Pipeline.
-
-## Validation
-
-Verify the transformed data in the Lakehouse and confirm
-successful pipeline execution.
-
-## Skills Practiced
-
-- Dataflow Gen2
-- Power Query transformations
-- Null handling
-- Column renaming
-- Filtering
-- Lakehouse
-- Pipeline integration
+## Result
+End-to-end ingestion and transformation completed successfully.
