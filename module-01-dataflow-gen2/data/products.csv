@@ -1,0 +1,21 @@
+ProductID,ProductName,Category,Price,StockQuantity,ProductStatus
+501,Laptop,Electronics,55000,25,Available
+502,Monitor,Electronics,18000,40,Available
+503,Keyboard,Accessories,2500,100,Available
+504,Mouse,Accessories,1200,150,Available
+505,Headphones,Accessories,3500,80,Available
+506,Tablet,Electronics,30000,35,Available
+507,Mobile Phone,Electronics,25000,60,Available
+508,Webcam,Accessories,4500,45,Available
+509,Printer,Office,12000,20,Available
+510,Office Chair,Furniture,8500,30,Available
+511,Desk,Furniture,15000,15,Available
+512,USB Hub,Accessories,1800,75,Available
+513,External SSD,Storage,9000,50,Available
+514,Router,Networking,6000,40,Available
+515,Keyboard Pro,Accessories,4500,65,Available
+516,Smart Watch,Electronics,7000,55,Available
+517,Power Bank,Electronics,2500,90,Available
+518,Projector,Electronics,35000,10,Available
+519,Scanner,Office,14000,18,Available
+520,Desk Lamp,Furniture,2200,70,Available
