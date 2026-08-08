@@ -1,0 +1,6 @@
+CustomerID,Name,City,Age,Status
+101,Ravi,Bangalore,25,Active
+102,Arun,Hubli,30,Active
+103,Kiran,Mysore,,Active
+104,Anil,Bangalore,35,Inactive
+105,Suresh,Bangalore,28,Active
