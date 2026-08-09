@@ -54,3 +54,17 @@ Fabric Lakehouse
 
 &#x20;   └── dbo.orders\_incremental
 
+---
+
+## Watermark-Based Incremental Load — Initial Setup
+
+To support incremental data loading, a control table was created to store the last successfully processed value.
+
+### Control / Watermark Table
+
+Table:
+
+```text
+LH_Ecommerce_Lakehouse
+└── Tables
+    └── dbo.watermark
