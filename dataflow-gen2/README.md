@@ -1,4 +1,4 @@
-# Module 1 — Dataflow Gen2 Ingestion
+# Dataflow Gen2 Ingestion
 
 ## Objective
 Build an end-to-end data ingestion and transformation solution
