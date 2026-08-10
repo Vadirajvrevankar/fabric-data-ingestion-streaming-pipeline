@@ -1,70 +1,52 @@
-\# Incremental Data Pipeline 
+# Incremental Data Pipeline
 
+## Project Overview
 
+This project demonstrates a parameterized, scheduled, and watermark-based incremental data ingestion pipeline built using Microsoft Fabric.
 
-\## Project Overview
+The project demonstrates:
 
-
-
-This project demonstrates a parameterized and scheduled data ingestion pipeline built using Microsoft Fabric.
-
-
-
-The first milestone focuses on loading order data from a CSV file stored in a Fabric Lakehouse into a Lakehouse table.
-
-
-
-The pipeline is designed to be reusable by using a pipeline parameter and Dynamic Content for the source file path.
-
-
-
-\---
-
-
-
-\## Architecture
-
-
-
-```text
-
-Fabric Lakehouse
-
-│
-
-├── Files
-
-│   └── orders.csv
-
-│
-
-│        ↓
-
-│
-
-│   Copy Data Activity
-
-│
-
-│        ↓
-
-│
-
-└── Tables
-
-&#x20;   └── dbo.orders\_incremental
+- Loading order data from a CSV file stored in a Fabric Lakehouse
+- Using pipeline parameters and Dynamic Content
+- Scheduling pipeline execution
+- Creating and using a watermark/control table
+- Using a Lookup activity to retrieve the last processed date
+- Filtering source data using the watermark
+- Loading only new records into a destination Lakehouse table
 
 ---
 
-## Watermark-Based Incremental Load — Initial Setup
-
-To support incremental data loading, a control table was created to store the last successfully processed value.
-
-### Control / Watermark Table
-
-Table:
+## Architecture
 
 ```text
-LH_Ecommerce_Lakehouse
+Microsoft Fabric Lakehouse
+│
+├── Files
+│   └── orders.csv
+│
+│        ↓
+│
+├── Pipeline Parameter
+│   └── SourceFilePath
+│
+│        ↓
+│
+├── Schedule Trigger
+│
+│        ↓
+│
+├── Lookup_Watermark
+│   └── Reads LastProcessedDate
+│
+│        ↓
+│
+├── Copy_New_Orders
+│   └── Filters records using order_date
+│
+│        ↓
+│
 └── Tables
+    ├── dbo.orders
+    ├── dbo.orders_incremental
+    ├── dbo.orders_incremental_v2
     └── dbo.watermark
