@@ -21,18 +21,18 @@ pipeline orchestration, Lakehouse processing, and real-time streaming.
 
 ## Project Modules
 
-### Module 1 — Dataflow Gen2
+### 1 — Dataflow Gen2
 Visual ETL using Dataflow Gen2, transformations, and Lakehouse output.
 
-### Module 2 — Pipelines
+### 2— Pipelines
 Copy pipelines, parameters, dynamic content, scheduling,
 incremental loading, and troubleshooting.
 
-### Module 3 — Lakehouse & Notebooks
+### 3— Lakehouse & Notebooks
 PySpark, DataFrames, Parquet, Delta tables, SQL queries,
 and notebook chaining.
 
-### Module 4 — Eventstream & Eventhouse
+### 4— Eventstream & Eventhouse
 Real-time streaming using Eventstream and Eventhouse,
 transformations, and multiple destinations.
 
