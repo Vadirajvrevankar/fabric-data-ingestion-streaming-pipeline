@@ -51,16 +51,30 @@ Used mainly for:
 
 Used mainly for:
 
-- Moving data
-- Copying data from source to destination
+-Moving data from source to destination
+-Source = From where data comes
+-Sink = Where data goes
+-Supports many source and sink connectors
+-Some connectors support both, while some support only source or sink
+-One Copy Activity = One source + One sink
 
 ### Dataflow Gen2
 
 Used for:
 
-- Low-code data ingestion
-- Data transformation
-- Power Query-based transformations
+-Low-code data ingestion and transformation
+-Uses Power Query for transformations
+-Supports multiple sources and multiple destinations
+-Used for data cleansing, filtering, joining, grouping, aggregation, etc.
+-Supports 5 main destinations:
+Lakehouse
+Warehouse
+Fabric SQL Database
+Azure SQL Database
+Azure Data Explorer
+-Supports Append and Replace write methods
+-Azure Data Explorer does not support Replace
+-Best when you need data transformation with little or no coding
 
 ### Notebook
 
