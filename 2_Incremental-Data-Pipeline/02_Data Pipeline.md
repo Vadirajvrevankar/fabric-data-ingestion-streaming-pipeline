@@ -98,6 +98,8 @@ Copy Activity = Data Movement
 Pipeline      = Orchestration
 ```
 
+Copy Activity supports many sources and destinations. Some can be used for both source and destination, while some can be used only as a source or only as a destination.
+
 ---
 
 # 3. Data Transformation Activities
